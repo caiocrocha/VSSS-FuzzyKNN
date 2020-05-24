@@ -1,5 +1,7 @@
 // Implementa��o do k-NN (k-nearest neighbors algorithm)
 
+// Código adaptado de https://github.com/marcoscastro/knn
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -457,8 +459,8 @@ int main(int argc, char *argv[])
         string classe = individuos[i].getClasse();
         string classe_obtida = classificarAmostra(individuos, individuos[i], K);
         
-        //cout << "Classe esperada: " << classe << endl;
-        //cout << "Classe obtida: " << classe_obtida << endl << endl;
+        cout << "Classe esperada: " << classe << endl;
+        cout << "Classe obtida: " << classe_obtida << endl << endl;
 
         conta_classes(classe, cont_classes);
         conta_classes(classe_obtida, cont_classes_obtidas);

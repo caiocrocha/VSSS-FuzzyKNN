@@ -1,6 +1,8 @@
 #ifndef CSVITERATOR_H
 #define CSVITERATOR_H
 
+// CSV file parser taken from https://stackoverflow.com/questions/1120140/how-can-i-read-and-parse-csv-files-in-c?page=1&tab=votes#tab-top
+
 #include <iterator>
 #include <iostream>
 #include <fstream>
