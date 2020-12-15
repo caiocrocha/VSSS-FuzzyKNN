@@ -437,10 +437,9 @@ int main(int argc, char *argv[])
     // processo de treinamento
     for (int i = 0, j = 0; i < tam; i++, j+=3)
     {
-        if(j > tam-3)
-            j = 0;
+        int k = j % tam;
         Point robot = {individuos[i].getX(), individuos[i].getY(), individuos[i].getTheta()};
-        vector<Point> enemiesK {enemies[j], enemies[j+1], enemies[j+2]};
+        vector<Point> enemiesK {enemies[k], enemies[k+1], enemies[k+2]};
         float df = defenseFactor(robot, centroidAtk, centroidDef);
         float cf = competitionFactor(robot, enemiesK, ball[i]);
         float af = angleFactor(robot, ball[i], centroidAtk);
